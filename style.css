@@ -1,0 +1,352 @@
+/* Estilos para o topo da página */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+.limite-rolagem {
+    height: calc(300vh + 300px); /* Ajuste o valor (+200px) conforme necessário */
+    overflow-y: hidden; /* Controla o excesso dentro da área */
+}
+/* Impede a rolagem lateral e força os elementos a se ajustarem */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1px;
+    position: relative; /* Removido fixed para rolar junto com a página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+}
+
+.texto {
+    font-weight: bold;
+    font-size: 32px;
+    margin-right: 10px;
+    color: #0e139c;
+}
+
+.imagem {
+    width: 32px;
+    height: 32px;
+}
+
+/* Linha cinza abaixo do texto */
+.linha-cinza {
+    width: 100%;
+    border: 2;
+    border-top: 3px solid #d3d3d3;
+    margin-top: 10px;
+    position: relative; /* Removido fixed para rolar junto com a página */
+    top: -10px; /* Ajusta a posição logo abaixo do topo */
+}
+
+/* Estilo para o conteúdo da página */
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 100px; /* Espaço para o topo fixo */
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0e139c;
+}
+
+/* Círculos fixos na tela */
+.circulo-container,
+.circulo-contorno,
+.circulo-contorno-3 {
+    position: relative; /* Removido fixed para rolar junto com a página */
+    top: 75px;
+    z-index: 1000;
+}
+
+.circulo {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.circulo .numero {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.linha-direita {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 2px;
+    background-color: orange;
+    border-radius: 2px;
+}
+
+.circulo-contorno {
+    width: 30px;
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 323%;
+    transform: translateY(-50%) translateX(50px);
+}
+
+.circulo-contorno .numero {
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.linha-direita-2 {
+    position: absolute;
+    top: 50%;
+    left: calc(17% + 23px);
+    transform: translateY(-50%);
+    width: 118px;
+    height: 2px;
+    background-color: orange;
+    border-radius: 2px;
+}
+
+.circulo-contorno-3 {
+    width: 30px;
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: calc(337% + 55px);
+    transform: translateY(-50%);
+}
+
+.circulo-contorno-3 .numero {
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Texto abaixo dos círculos e linhas */
+.texto-confirmacao {
+    position: relative; /* Mantém o texto no fluxo da página */
+    top: 110px;
+    left: 10px;
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    font-weight: normal;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+/* Container para os formulários */
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+    margin-top: 140px;
+}
+
+/* Estilo dos formulários */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o texto acima do formulário */
+.formulario label {
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+}
+
+/* Estilo para os campos de entrada */
+.formulario input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+/* Texto de confirmação fixo na tela */
+.texto-confirmacao {
+    position: absolute; /* Mantém o texto fixo enquanto a rolagem ocorre */
+    top: calc(13% + 60px); /* Ajusta a distância para abaixo das linhas e círculos */
+    left: 10px;
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    font-weight: normal;
+    margin-top: 20px;
+    z-index: 999;
+}
+
+/* Remover a propriedade fixed dos círculos, caso queira que eles rolem junto */
+.circulo-container {
+    position: relative; /* Remove o fixo e permite rolar junto com a página */
+    top: 13px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.botao-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    height: 100vh; /* Altura do container, ajustável */
+}
+
+.botao-continuar {
+    background-color: orange; /* Cor de fundo laranja */
+    color: white; /* Cor do texto */
+    margin-top: -490px;
+    font-size: 15px; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
+    border: none; /* Remove as bordas */
+    border-radius: 3px; /* Borda arredondada */
+    padding: 15px 30px; /* Espaçamento interno */
+    width: 295px; /* Largura maior */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.botao-continuar:hover {
+    background-color: #ff8c00; /* Laranja mais escuro ao passar o mouse */
+}
+
+/* Removendo qualquer margem extra após o botão */
+.botao-container::after {
+    content: ""; /* Insere um conteúdo vazio */
+    display: block; /* Garante que seja visível */
+    clear: both; /* Remove floats caso existam */
+}
+
+html, body {
+    height: 100%; /* Garante que a altura seja 100% da tela */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Reduz a altura principal para 70% da viewport */
+    margin-top: 50px; /* Ajuste conforme necessário */
+}
+
+.botao-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 290px;
+    align-items: center;
+    height: auto; /* Remove alturas excessivas */
+    margin-bottom: -820px; /* Espaço menor abaixo do botão */
+}
+
+.botao-continuar {
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 30px;
+    width: 295px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.botao-continuar:hover {
+    background-color: #ff8c00;
+}
+
+.texto-confirmacao {
+    margin-top: 10px; /* Reduz o espaço acima do texto */
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    font-weight: normal;
+}
+.texto-confirmacao {
+    position: relative; /* Permite que o texto acompanhe a rolagem */
+    width: 93%; /* Largura total para centralizar o texto */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #000; /* Cor do texto */
+    margin-top: -90px; /* Espaço acima do texto */
+    z-index: 1; /* Garante que esteja acima de outros elementos, se necessário */
+}
+
+.footer {
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px;
+    color: #666;
+    padding: 19px 0;
+    margin-top: 650px; /* Ajusta a posição do rodapé */
+    background-color: transparent; /* Sem fundo */
+    position: relative; /* Permite que o rodapé fique fixado no lugar sem afetar o conteúdo */
+}
+
+.imagem-centralizada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; /* Ajuste o tamanho da imagem conforme necessário */
+}
+.texto-confirmacao {
+    position: relative; /* Faz com que o texto acompanhe a rolagem */
+    top: 130px; /* Distância do topo da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    font-size: 14px;
+    z-index: 10;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+}

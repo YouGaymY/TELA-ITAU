@@ -1,0 +1,280 @@
+/* Estilos para o topo da página */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+.limite-rolagem {
+    height: calc(300vh + 300px); /* Ajuste o valor (+200px) conforme necessário */
+    overflow-y: hidden; /* Controla o excesso dentro da área */
+}
+/* Impede a rolagem lateral e força os elementos a se ajustarem */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1px;
+    position: relative; /* Removido fixed para rolar junto com a página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+}
+
+.texto {
+    font-weight: bold;
+    font-size: 32px;
+    margin-right: 10px;
+    color: #0e139c;
+}
+
+.imagem {
+    width: 32px;
+    height: 32px;
+}
+
+/* Linha cinza abaixo do texto */
+.linha-cinza {
+    width: 100%;
+    border: 2;
+    border-top: 3px solid #d3d3d3;
+    margin-top: 10px;
+    position: relative; /* Removido fixed para rolar junto com a página */
+    top: -10px; /* Ajusta a posição logo abaixo do topo */
+}
+
+/* Estilo para o conteúdo da página */
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 100px; /* Espaço para o topo fixo */
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0e139c;
+}
+
+/* Círculos fixos na tela */
+.circulo-container,
+.circulo-contorno,
+.circulo-contorno-3 {
+    position: relative; /* Removido fixed para rolar junto com a página */
+    top: 75px;
+    z-index: 1000;
+}
+
+.circulo {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.circulo .numero {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.linha-direita {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 2px;
+    background-color: orange;
+    border-radius: 2px;
+}
+
+.circulo-contorno {
+    width: 30px;
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 323%;
+    transform: translateY(-50%) translateX(50px);
+}
+
+.circulo-contorno .numero {
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.linha-direita-2 {
+    position: absolute;
+    top: 50%;
+    left: calc(17% + 23px);
+    transform: translateY(-50%);
+    width: 118px;
+    height: 2px;
+    background-color: orange;
+    border-radius: 2px;
+}
+
+.circulo-contorno-3 {
+    width: 30px;
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: calc(337% + 55px);
+    transform: translateY(-50%);
+}
+
+.circulo-contorno-3 .numero {
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Remover a propriedade fixed dos círculos, caso queira que eles rolem junto */
+.circulo-container {
+    position: relative; /* Remove o fixo e permite rolar junto com a página */
+    top: 13px;
+    left: 10px;
+    z-index: 1000;
+}
+
+/* Container principal */
+.circulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Largura do container */
+    height: 20px; /* Altura ajustável */
+    position: relative;
+}
+
+/* Wrapper para cada círculo e linha */
+.circulo-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilo dos círculos */
+.circulo {
+    width: 30px; /* Tamanho ajustável do círculo */
+    height: 30px; /* Tamanho ajustável do círculo */
+    border-radius: 50%;
+    background-color: #FF8C00; /* Cor laranja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Números dentro dos círculos */
+.numero {
+    font-size: 20px; /* Tamanho ajustável do número */
+    font-weight: bold;
+    color: #FFF; /* Cor branca */
+}
+
+/* Estilo das linhas */
+.linha {
+    width: 58px; /* Comprimento ajustável da linha */
+    height: 5px; /* Espessura ajustável da linha */
+    background-color: #FF8C00; /* Cor da linha */
+}
+
+/* Posições para os círculos */
+.esquerda {
+    justify-content: flex-start;
+}
+
+.meio {
+    justify-content: center;
+}
+
+.direita {
+    justify-content: flex-end;
+}
+
+/* Estilo do container principal */
+.container-parabens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Estilo do círculo */
+.circulo-parabens {
+    width: 70px; /* Tamanho ajustável */
+    height: 70px; /* Tamanho ajustável */
+    background-color: #FF8C00; /* Cor laranja */
+    border-radius: 50%; /* Torna o elemento circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do símbolo */
+.simbolo {
+    font-size: 40px; /* Tamanho ajustável do símbolo */
+    color: #FFFFFF; /* Cor branca */
+    font-family: Arial, sans-serif; /* Garante um símbolo mais uniforme */
+    font-weight: bold; /* Deixa o símbolo mais destacado */
+}
+
+/* Estilo do texto abaixo do círculo */
+.texto-parabens {
+    margin-top: 10px; /* Espaço entre o círculo e o texto */
+    font-size: 27px; /* Tamanho do texto */
+    font-weight: bold;
+    color: #FF8C00; /* Cor laranja */
+    text-align: center;
+}
+
+.texto-abaixo-circulo {
+    position: relative;
+    left: 10px; /* Posiciona no canto esquerdo */
+    margin-top: 25px; /* Ajuste para alinhar abaixo do círculo */
+    font-size: 15px;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.texto-abaixo-circulo-azul {
+    position: relative;
+    left: 10px; /* Posiciona no canto esquerdo */
+    margin-top: 10px; /* Espaço para separar do texto anterior */
+    font-size: 16px;
+    color: #003366; /* Azul escuro */
+    font-family: Arial, sans-serif;
+    font-weight: bold; /* Aplica o negrito */
+}
